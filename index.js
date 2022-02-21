@@ -77,5 +77,98 @@ $(function() {
 
   })
 
-  
+  ///// game start
+  $startBtn.on('click', function (event) {
+
+    // hide remind
+    $remind.hide()
+
+    /// show game and run countdown time
+    $gameStart.show(function () {
+
+      // hide times-up, score-btn
+      $timesUp.hide()
+      $scoreBtn.hide()
+
+      let time = ''
+      let minute = ''
+      let second = ''
+
+      // get countdown time
+      function getCountDownTime() {
+        time = `${minute} : ${second}`
+        $gameTime.text(`Time: ${time}`)
+      }
+      // game over: time's up
+      function gameOver() {
+        $gameName.hide()
+        $gameScore.hide()
+        $gameTime.hide()
+        clearInterval(newTime)
+        clearInterval(displayGameAgain)
+        $timesUp.show()
+        $scoreBtn.show()
+        $gameContent.off('click')
+      }
+
+      // name
+      $gameName.html(`<span>♞</span> ${playerName}`)
+      // score
+      totalScore = 0
+      $gameScore.text(`Score: ${totalScore}`)
+      // time
+      minute = '02'
+      second = '00'
+      getCountDownTime()
+
+      // run countdown time
+      function countDownTime() {
+
+        // second = 00
+        if (second === '00') {
+
+          // second = 00, minute = 02 ~ 01
+          if (minute !== '00') {
+            // minute
+            minute = Number(minute) - 1
+            minute = `0${minute}`
+            //second (60 - 1)
+            second = 59
+            getCountDownTime()
+
+            // time = 00:00 (time's up)
+          } else if (minute === '00') {
+            minute = '00'
+            second = '00'
+            getCountDownTime()
+            gameOver()
+            return
+          }
+
+          // second = 10
+        } else if (second === '10') {
+          second = '09'
+          getCountDownTime()
+
+          // second = 01
+        } else if (second === '01') {
+          second = '00'
+          getCountDownTime()
+
+          // second = 09 ~ 02
+        } else if (second[0] === '0') {
+          second = Number(second) - 1
+          second = `0${second}`
+          getCountDownTime()
+
+        } else {
+          second = Number(second) - 1
+          second = String(second)
+          getCountDownTime()
+        }
+      }
+      let newTime = setInterval(countDownTime, 1000)
+    })
+
+  })
 })
