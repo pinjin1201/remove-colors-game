@@ -170,5 +170,34 @@ $(function() {
       let newTime = setInterval(countDownTime, 1000)
     })
 
+    /// make and display colors square
+    function renderSquareElement() {
+      $gameContent.html(function () {
+
+        let content = ``
+        let contentArray = []
+
+        for (let i = 0; i < 40; i++) {
+          contentArray.push(`<div class="green"></div>`)
+          contentArray.push(`<div class="blue"></div>`)
+          contentArray.push(`<div class="white"></div>`)
+          contentArray.push(`<div class="yellow"></div>`)
+          contentArray.push(`<div class="red"></div>`)
+        }
+
+        for (let n = 0; n < contentArray.length; n++) {
+          let number = Math.floor(Math.random() * (contentArray.length))
+          const item = contentArray[number]
+          content += item
+          contentArray.splice(number, 1)
+        }
+        return contentArray
+
+      })
+    }
+    renderSquareElement()
+    const displayGameAgain = setInterval(renderSquareElement, 9000)
+
+    
   })
 })
