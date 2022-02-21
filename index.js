@@ -294,4 +294,14 @@ $(function() {
     }
     showTotalScore()
   })
+
+  ///// play again
+  $playAgain.on('click', function () {
+    $score.hide()
+    $precondition.show()
+    $gameName.show()
+    $gameScore.show()
+    $gameTime.show()
+  })
+  
 })
