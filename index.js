@@ -254,8 +254,44 @@ $(function() {
         checkMiddleRowColor()
       }
     })
+  })
 
+  ///// show total score 
+  $scoreBtn.on('click', function () {
 
+    let title = ''
+    let result = {
+      high: '恭喜你! 消消樂大王',
+      fine: '不錯! 遊戲高手',
+      middle: '還可以! 低空飛過',
+      ordinary: '差一點! 也很不錯了',
+      low: '再接再厲! 加把勁'
+    }
 
+    // count title
+    totalScore = Number(totalScore)
+    if (totalScore >= 800) {
+      title = result.high
+    } else if (totalScore >= 700) {
+      title = result.fine
+    } else if (totalScore >= 600) {
+      title = result.middle
+    } else if (totalScore >= 500) {
+      title = result.ordinary
+    } else if (totalScore < 500) {
+      title = result.low
+    }
+    // get score
+    totalScore = `${totalScore} 分`
+
+    // show total score
+    function showTotalScore() {
+      $gameStart.hide()
+      $score.show()
+      $scoreTitle.text(title)
+      $scoreName.text(playerName)
+      $scoreText.text(totalScore)
+    }
+    showTotalScore()
   })
 })
