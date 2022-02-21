@@ -35,7 +35,7 @@
 - JQuery
 
 ## 取得檔案
-開啟終端機，輸入 `git clone https://github.com/pinjin1201/wedding.git`
+開啟終端機，輸入 `git clone https://github.com/pinjin1201/remove-colors-game.git`
 
 ## URL
 https://pinjin1201.github.io/remove-colors-game
