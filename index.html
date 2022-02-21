@@ -4,9 +4,112 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Remove Colors Game</title>
+  <!-- title icon -->
+  <link rel="icon" href="image/title.jpg" type="image/x-icon" />
+  <!-- Reset CSS -->
+  <link rel="stylesheet" href="style/reset.css">
+  <!-- index CSS -->
+  <link rel="stylesheet" href="style/index.css">
+
 </head>
 <body>
   
+  <div class="game">
+    <!-- title -->
+    <div class="title">
+      <div class="image">
+        <img src="image/title.jpg" alt="game photo">
+      </div>
+      <div class="text">
+        COLORS: Remove Me !
+      </div>
+    </div>
+    <!-- main -->
+    <main>
+      <!-- precondition -->
+      <div class="precondition">
+        <div class="precondition-title">WELCOME</div>
+        <div class="name">
+          <label for="name">Your Name:</label><br />
+          <input type="text" name="name" id="name" />
+        </div>
+        <button>OK</button>
+        <div class="precondition-footer">▦ Remove Colors Game</div>
+      </div>
+      <!-- description -->
+      <div class="description">
+        <div class="description-title">Ready?</div>
+        <div class="description-text">
+          Please click color to remove connected colors
+          within two minutes.
+        </div>
+        <div class="description-icon">♛</div>
+      </div>
+      <!-- remind -->
+      <div class="remind">
+        <!-- pattern -->
+        <div class="pattern">
+          <div class="pattern-title">
+            <span>➜</span> Find us <span>➜</span>
+          </div>
+          <div class="pattern-group">
+            <div class="blue"></div>
+            <div class="green"></div>
+            <div class="yellow"></div>
+            <div class="white"></div>
+            <div class="red"></div>
+          </div>
+        </div>
+        <!-- time -->
+        <div class="remaining-time">
+          Remaining Time:<br />
+          2 minutes
+        </div>
+        <!-- start game btn -->
+        <div class="start-btn">START</div>
+      </div>
+      <!-- GAME start -->
+      <div class="start">
+        <div class="information">
+          <!-- add in js -->
+          <div class="name"></div>
+          <div class="score"></div>
+          <div class="time"></div>
+        </div>
+        <!-- game over: time's up -->
+        <div class="show-score">
+          <div class="times-up">Time's up</div>
+          <div class="score-btn">Score</div>
+        </div>
+        <!-- content: add in js -->
+        <div class="content"></div>
+      </div>
+      <!-- score -->
+      <div class="score">
+        <div class="information">
+          <!-- add in js -->
+          <div class="score-title"></div>
+          <div class="score-name"></div>
+          <div class="score-text"></div>
+        </div>
+        <div class="play-again">Play again</div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer-title">
+        # RemoveColorsGame
+      </div>
+      <div class="footer-copy">
+        &copy; 2022 by Pin Jin
+      </div>
+    </footer>
+  </div>
+
+  <!-- JQuery -->
+  <script src="jquery-3.6.0.js"></script>
+  <!-- index js -->
+  <script src="index.js"></script>
 </body>
 </html>
