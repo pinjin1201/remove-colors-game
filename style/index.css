@@ -248,3 +248,91 @@ footer .footer-copy {
   cursor: pointer;
   opacity: 0.7;
 }
+
+/*** gmae start ***/
+.start {
+  margin-top: -70px;
+}
+.start .information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 30px;
+}
+.start .name span {
+  font-size: 1.3em;
+}
+.start .name, 
+.start .score {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+.start .time {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  padding: 4px 0;
+  background:#4682B4;
+  color:#0a3c14;
+  width: 130px; height: 30px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-bordr-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* game over - times up */
+.start .show-score {
+  display: flex;
+  justify-content: center;
+}
+.start .times-up {
+  color: #2F4F4F;
+  font-size: 2.3em;
+  margin-top: 45px;
+}
+/* game over - show score */
+.start .show-score .score-btn {
+  width: 70px;
+  height: 33px;
+  margin: 52px 0 0 15px;
+  padding-top: 7px;
+  background: #4682B4;
+}
+.start .show-score .score-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+/* game content */
+.start .content {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap:  wrap;
+  width: 260px; height: 260px;
+  margin: 10px auto;
+  border: 6px solid #2F4F4F;
+}
+/* color square */
+.start .content div {
+  width: 26px; height: 26px;
+  border: none;
+  margin: 0; padding: 0;
+  cursor: pointer;
+}
+.start .content .blue {
+  background:#0a0f46;
+}
+.start .content .green {
+  background:#0a3c14;
+}
+.start .content .yellow {
+  background:#B8860B;
+}
+.start .content .white {
+  background:#e6ebf0;
+}
+.start .content .red {
+  background:#8B0000;
+}
