@@ -336,3 +336,45 @@ footer .footer-copy {
 .start .content .red {
   background:#8B0000;
 }
+
+/*** score ***/
+.score .information{
+  width: 280px;
+  font-weight: bold;
+  margin: 0 auto 50px;
+  padding: 50px 30px;
+  background:#B8860B;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-bordr-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+.score .information .score-title {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 1.4em;
+  margin-bottom: 25px;
+}
+.score .information .score-name{
+  margin-bottom: 20px;
+}
+.score .score-text{
+  font-size: 1.6em;
+  letter-spacing: 3px;
+}
+.score .play-again {
+  color:#B8860B;
+  width: 120px; height: 33px;
+  padding: 6px 0;
+  margin: 0 auto 40px;
+  background:#0a0f46;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-bordr-radius: 8px;
+  -ms-border-radius: 8px;
+  border-radius: 8px;
+}
+.score .play-again:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
