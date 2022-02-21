@@ -198,6 +198,64 @@ $(function() {
     renderSquareElement()
     const displayGameAgain = setInterval(renderSquareElement, 9000)
 
-    
+    /// click color square
+    $gameContent.on('click', 'div', function (event) {
+
+      const $this = $(this)
+      const $allSquare = $this.parent().children()
+      const squareIndex = $this.index()
+      const indexLength = String(squareIndex).length
+      const indexValueOne = String(squareIndex)[0]
+
+      // clicked square and its up/down color
+      const $up = $allSquare.eq(squareIndex - 10)
+      const $down = $allSquare.eq(squareIndex + 10)
+      const color = $this.css('background-color')
+      const upColor = $up.css('background-color')
+      const downColor = $down.css('background-color')
+
+      // remove color and get score
+      function getScore() {
+        $this.css('background-color', '#82a0b4')
+        totalScore += 5
+        $gameScore.text(`Score: ${totalScore}`)
+      }
+      // check first row color
+      function checkFirstRowColor() {
+        if (downColor === color) {
+          $down.css('background-color', '#82a0b4')
+          getScore()
+        }
+      }
+      // check last row color
+      function checkLastRowColor() {
+        if (upColor === color) {
+          $up.css('background-color', '#82a0b4')
+          getScore()
+        }
+      }
+      // check middle row color
+      function checkMiddleRowColor() {
+        if (upColor === color) {
+          checkLastRowColor()
+        } else if (downColor === color) {
+          checkFirstRowColor()
+        }
+      }
+
+      // first row square
+      if (indexLength === 1) {
+        checkFirstRowColor()
+        // last row square
+      } else if (indexValueOne === '9') {
+        checkLastRowColor()
+        // middle row square
+      } else {
+        checkMiddleRowColor()
+      }
+    })
+
+
+
   })
 })
