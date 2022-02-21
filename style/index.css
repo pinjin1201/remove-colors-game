@@ -82,3 +82,44 @@ footer .footer-copy {
     font-size: 25px;
   }
 }
+
+/*** precondition ***/
+.precondition .precondition-title {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+.precondition .name label {
+  font-size: 1.2em;
+}
+.precondition .name input {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  height: 30px;
+  background-color: #fff;
+  border-color: #0a0f46;
+  -moz-border-radius: 0%;
+  -webkit-border-radius: 0;
+  -o-bordr-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  font-size: initial;
+}
+.precondition button {
+  font-weight: bold;
+  background: #B8860B;
+  width: 50px; height: 50px;
+  margin-bottom: 50px;
+  border: none;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -o-bordr-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.precondition button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.precondition .precondition-footer {
+  margin-bottom: 110px;
+}
