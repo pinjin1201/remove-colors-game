@@ -169,3 +169,82 @@ footer .footer-copy {
     font-size: 2.2em;
   }
 }
+
+/*** remind ***/
+.remind {
+  margin-top: -60px;
+}
+.remind .pattern {
+  padding: 20px;
+}
+.pattern .pattern-title {
+  font-size: 2.5em;
+  margin-bottom: 35px;
+  color: #000;
+}
+.pattern .pattern-title span{
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: bold;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.pattern .pattern-group {
+  display: flex;
+  justify-content: center;
+}
+.pattern .pattern-group div {
+  box-sizing: content-box;
+  width: 26px; height: 52px;
+  border: 3px solid #000;
+  margin: 10px;
+}
+.pattern-group .blue {
+  background:#0a0f46;
+}
+.pattern-group .green {
+  background:#0a3c14;
+}
+.pattern-group .yellow {
+  background:#B8860B;
+}
+.pattern-group .white {
+  background:#e6ebf0;
+}
+.pattern-group .red {
+  background:#8B0000;
+}
+.remind .remaining-time {
+  width: 250px;
+  margin: 0 auto ;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  background:#4682B4;
+  padding: 15px 22px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-bordr-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+}
+.remind .start-btn {
+  font-size: 1.1em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  width: 250px; height: 40px;
+  margin: 25px auto 35px;
+  padding: 12px 0;
+  background: #ADD8E6;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -o-bordr-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 10px;
+}
+.remind .start-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
