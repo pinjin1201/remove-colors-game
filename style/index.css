@@ -123,3 +123,49 @@ footer .footer-copy {
 .precondition .precondition-footer {
   margin-bottom: 110px;
 }
+
+/*** description ***/
+.description {
+  padding: 0 50px;
+}
+.description-title {
+  font-size: 2.5em;
+  color: #0a3c14;
+  margin-top: -20px;
+  margin-bottom: 50px;
+}
+.description-text {
+  font-size: 1.5em;
+  line-height: 1.3em;
+}
+.description-icon {
+  font-size: 3em;
+  color:#966e3c;
+  margin-top: 50px;
+}
+/*
+  description
+  min-width: 350 px
+  max-width: 1300 px
+*/
+@media (min-width: 750px) {
+  .description-text {
+    font-size: 2em;
+  }
+  .description-icon {
+    font-size: 4em;
+  }
+}
+@media (min-width: 960px) {
+  .description {
+    padding: 0 150px;
+  }
+}
+@media (min-width: 1000px) {
+  .description {
+    padding: 0 200px;
+  }
+  .description-text {
+    font-size: 2.2em;
+  }
+}
